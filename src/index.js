@@ -1,8 +1,10 @@
-const http = require('http')
-const server = http.createServer((req, res) => {
-    res.write("Hello, world!")
-    res.end()
-})
+const url = require('url')
 
-const port  = 3002
-server.listen(port, console.log(`http://localhost:${port}`))
+const decomposedUrl = new url.URL('https://rianvitor.vercel.app')
+
+console.log('href:' + ' ' +  decomposedUrl.href)
+console.log("protocol:" + " " +  decomposedUrl.protocol);
+console.log("host:" + " " +  decomposedUrl.host);
+console.log("hostname:" + " " +  decomposedUrl.hostname);
+console.log("origin:" + " " +  decomposedUrl.origin);
+
