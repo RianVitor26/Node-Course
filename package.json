@@ -1,0 +1,16 @@
+{
+  "name": "Node-Course",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/RianVitor26/Node-Course",
+  "author": "RianVitor26 <rianvitorlhe@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "nodemon": "^2.0.20"
+  },
+  "scripts": {
+    "dev": "nodemon /src/index.js"
+  }
+}
