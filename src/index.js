@@ -1,9 +1,11 @@
-const path = require('path')
-const url = "www.mercadolivre"
+const fs = require("fs");
 
-console.log(path.resolve('index.js'))
-console.log(path.basename(url))
-console.log(path.join(url, "/produtos.com"))
-console.log(path.extname('index.js'))
-console.log(__dirname  + '/index.js')
-
+if (!fs.existsSync("./fsfile")) {
+  console.log("Pasta n encontrada, criando...");
+  fs.mkdir("fsfile", () => {
+    console.log("Criado com sucesso!");
+  });
+} else {
+  fs.existsSync("./fsfile");
+  console.log("Pasta encontrada!");
+}
