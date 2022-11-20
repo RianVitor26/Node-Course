@@ -12,5 +12,8 @@
   },
   "scripts": {
     "dev": "nodemon /src/index.js"
+  },
+  "devDependencies": {
+    "prisma": "^4.6.1"
   }
 }
