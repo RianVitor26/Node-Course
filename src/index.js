@@ -1,11 +1,11 @@
-const fs = require("fs");
+const os = require('os')
+const cpus = os.cpus()
+cpus.map(cpu => {
+  if (cpu.speed > 2000) {
+    console.log("Good speed")
+  } else {
+    console.log("Bad speedd")
+  }
+})
 
-if (!fs.existsSync("./fsfile")) {
-  console.log("Pasta n encontrada, criando...");
-  fs.mkdir("fsfile", () => {
-    console.log("Criado com sucesso!");
-  });
-} else {
-  fs.existsSync("./fsfile");
-  console.log("Pasta encontrada!");
-}
+
